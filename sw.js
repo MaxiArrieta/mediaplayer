@@ -22,14 +22,14 @@ async function precache() {
     // Instanciamos el cache con el nombre v1
     const cache = await caches.open(VERSION);
     return cache.addAll([
-        '/',
-        '/index.html',
-        '/assets/index.js',
-        '/assets/MediaPlayer.js',
-        '/assets/plugins/AutoPlay.js',
-        '/assets/plugins/AutoPause.js',
-        '/assets/index.css',
-        '/assets/video.mp4',
+        // '/',
+        // '/index.html',
+        // '/assets/index.js',
+        // '/assets/MediaPlayer.js',
+        // '/assets/plugins/AutoPlay.js',
+        // '/assets/plugins/AutoPause.js',
+        // '/assets/index.css',
+        // '/assets/video.mp4',
     ]);
 }
 
@@ -41,7 +41,7 @@ async function cachedResponse(request) {
 
 async function updateCache(request) {
     const cache = await caches.open(VERSION);
-    const response = fetch(request);
-
+    const response = await fetch(request);
+    // console.log(response);
     return cache.put(request, response);
 }

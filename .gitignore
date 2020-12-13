@@ -8,7 +8,9 @@
 /build
 
 # ejercicios
-/ejercicios
+ejercicios
+dist
+.cache
 
 # misc
 .DS_Store
